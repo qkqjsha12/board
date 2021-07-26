@@ -20,7 +20,7 @@ class Board(models.Model):
     walletype = models.CharField(max_length=3,null=True)
     awAd = models.CharField(max_length=50,null=True) #a주소
     bwAd = models.CharField(max_length=50,null=True) #b주소
-    stakingW = models.BooleanField(null=True) #스테이킹 여부
+    stakingW = models.CharField(max_length=5,null=True) #스테이킹 여부
     stakingSD = models.DateField(null=True) #스테이킹 시작날짜
     stakingDate = models.DateField(null=True) #스테이킹 기간
     stakingV = models.CharField(max_length=5,null=True) #스테이킹 지급여부

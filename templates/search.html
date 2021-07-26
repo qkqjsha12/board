@@ -1,0 +1,21 @@
+{% extends 'list.html' %}
+
+{% block content %}
+ {% for board in querys %}
+ <tbody>
+<tr class="text-center">
+            <th scope="row"><span>{{ board.no }}</span></th>
+            <td><a href='/detail/{{ board.no }}' target='_self'>
+            <span>{{ board.name }}</span></a></td>
+            <td><span>{{ board.phone }}</span></td>
+            <td><span>{{ board.vdate| date:"Y-m-d" }}</span></td>
+            <td><span>{{ board.gdate| date:"Y-m-d" }}</span></td>
+            <td><span>{{ board.ap }}</span></td>
+            <td><span>{{ board.walletype }}</span></td>
+        </tr>
+        {% empty %}
+        <h5>검색 결과 없음</h5>
+        {% endfor %}
+        </tbody>
+    </table>    
+{% endblock %}
